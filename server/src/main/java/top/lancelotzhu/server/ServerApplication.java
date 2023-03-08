@@ -1,15 +1,15 @@
-package top.lancelotzhu.client;
+package top.lancelotzhu.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("top.lancelotzhu.client")
-public class ClientApplication {
+@ComponentScan("top.lancelotzhu.server")
+public class ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ClientApplication.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 
 }
