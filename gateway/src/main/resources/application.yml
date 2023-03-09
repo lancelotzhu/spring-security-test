@@ -1,0 +1,21 @@
+server:
+  port: 8000
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: login_route
+          uri: http://localhost:8001/
+          predicates:
+            - Path=/login
+        - id: user_route
+          uri: http://localhost:8001/
+          predicates:
+            - Path=/user
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: aa9e79846df9cbc6201f
+            client-secret: c324b93443594fe84d106bb32c904799e1839e6a

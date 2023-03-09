@@ -16,6 +16,7 @@ public class SecurityConfig {
             "/health",
             "/api/socket/**"
     };
+
     @Bean
     SecurityWebFilterChain webFluxSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         http.authorizeExchange().pathMatchers(excludedAuthPages).permitAll()  //无需进行权限过滤的请求路径
